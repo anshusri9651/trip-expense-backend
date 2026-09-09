@@ -6,13 +6,13 @@
     <title>{{ $title ?? 'Roamly' }} · Trip expenses</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/legal.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/admin-panel.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/trips.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/visuals.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/legal.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/admin.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/admin-panel.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/trips.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/profile.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/visuals.css') }}">
 </head>
 <body>
     @yield('content')
