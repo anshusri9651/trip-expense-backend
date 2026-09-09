@@ -1,0 +1,55 @@
+/* Shared travel imagery layer for the dashboard surfaces. */
+.hero-card{background:linear-gradient(90deg,#28256fe8,#5148e5b8),url('/images/roamly-coast.png') center 54%/cover!important}
+.trip-card{position:relative;overflow:hidden;background:linear-gradient(145deg,#fffffffa,#ffffffeb),url('/images/roamly-coast.png') center/cover!important}
+.admin-main{background:linear-gradient(180deg,#f6f7fbf0,#f6f7fb 260px),url('/images/roamly-coast.png') top right/520px auto no-repeat}
+.workspace-head{position:relative;overflow:hidden;border-radius:24px;padding:20px 24px;background:linear-gradient(90deg,#ffffffee,#ffffffd9),url('/images/roamly-coast.png') center/cover;box-shadow:0 10px 30px #1c27400c}
+.workspace-head:after{content:'';position:absolute;right:6%;top:-80px;width:220px;height:220px;border-radius:50%;background:#5148e512;border:1px solid #5148e51c}
+@media(max-width:800px){.admin-main{background-size:320px auto}.workspace-head{padding:16px}}
+
+/* Calm motion system: no layout shifts, and disabled for motion-sensitive users. */
+@keyframes roamly-rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@keyframes roamly-shimmer{0%{transform:translateX(-120%) rotate(12deg)}100%{transform:translateX(420%) rotate(12deg)}}
+@keyframes roamly-float{0%,100%{transform:translateY(0) rotate(-10deg)}50%{transform:translateY(-9px) rotate(-4deg)}}
+.dash-main,.trip-workspace,.profile-main,.legal-page,.legal-admin,.admin-main{animation:roamly-rise .55s ease-out both}
+.hero-card{position:relative;isolation:isolate}
+.hero-card:before{content:'';position:absolute;z-index:-1;top:-40%;left:-30%;width:20%;height:180%;background:#ffffff22;filter:blur(12px);transform:rotate(12deg);animation:roamly-shimmer 6s ease-in-out infinite}
+.hero-orbit{animation:roamly-float 4s ease-in-out infinite}
+.trip-card,.workspace-card,.admin-card,.stat-grid article{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.trip-card:hover,.workspace-card:hover,.admin-card:hover,.stat-grid article:hover{transform:translateY(-4px);box-shadow:0 16px 34px #1c274016;border-color:#d9dcfa}
+.trip-card.is-clickable{cursor:pointer}
+.primary,.small-button,.filter-button{transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease}
+.primary:hover,.small-button:hover,.filter-button:hover{transform:translateY(-2px);box-shadow:0 8px 18px #5148e52b}
+.primary:active,.small-button:active,.filter-button:active{transform:translateY(0) scale(.98)}
+.sidebar nav a,.admin-sidebar nav a{transition:background-color .2s ease,color .2s ease,transform .2s ease}
+.sidebar nav a:hover,.admin-sidebar nav a:hover{transform:translateX(3px)}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.trip-card:hover,.workspace-card:hover,.admin-card:hover,.stat-grid article:hover{transform:none}}
+.search-box{min-height:46px}.search-box:first-letter{font-size:22px}.search-box input{font-size:14px}.search-box:focus-within{border-color:#5148e5;box-shadow:0 0 0 4px #5148e51a}.pagination-wrap{display:flex;justify-content:center;margin:28px 0 4px}.pagination-wrap nav{display:flex;gap:5px}.pagination-wrap a,.pagination-wrap span{border:1px solid #e4e7f0;border-radius:8px;padding:9px 13px;background:#fff;color:#5148e5;font-size:13px}.pagination-wrap span{background:#5148e5;color:#fff;border-color:#5148e5}
+.dash-main{margin:0 auto!important;align-self:stretch;min-height:100vh}.dashboard-shell{align-items:stretch}.trips-page-grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px}.trips-page-grid .trip-card{min-height:250px;display:flex;flex-direction:column}.trips-page-grid .trip-card footer{margin-top:auto}.trips-page-grid .record-link{display:inline-block;margin-top:11px;font-size:13px}.dash-head{margin-bottom:24px}.dashboard-filters{margin-top:18px;margin-bottom:24px}.trip-card:nth-child(3n+2){--accent:#0d9488!important}.trip-card:nth-child(3n+3){--accent:#d97706!important}.trip-card:after{content:'✦';position:absolute;right:18px;bottom:12px;color:var(--accent);opacity:.12;font-size:76px;line-height:1;pointer-events:none;animation:roamly-float 5s ease-in-out infinite}.sidebar{flex-shrink:0}
+@media(max-width:800px){.dash-main{min-height:calc(100vh - 1px)}.dashboard-filters{margin-top:12px}.trips-page-grid{grid-template-columns:1fr}}
+.admin-search{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid #e1e5ef;border-radius:13px;padding:5px 7px 5px 14px;margin:0 0 22px;box-shadow:0 8px 22px #1c274008}.admin-search span{font-size:22px;color:#7c87a1}.admin-search input{border:0!important;box-shadow:none!important;padding:11px 4px!important;flex:1;min-width:0}.admin-search button{border:0;border-radius:9px;background:#5148e5;color:#fff;font-weight:700;padding:11px 17px;cursor:pointer}.admin-search a{font-size:12px;color:#5148e5;font-weight:700;padding:0 8px}
+.clear-filter{color:#5148e5;font-weight:700;font-size:13px;padding:12px 4px;white-space:nowrap}
+.password-field{position:relative;display:block}.password-field input{padding-right:48px}.password-toggle{position:absolute;right:10px;top:50%;transform:translateY(-50%);border:0;background:transparent;color:#7d879c;cursor:pointer;font-size:18px;padding:5px}.password-toggle:hover{color:#5148e5}.alert.success{background:#e4f8ef;color:#087d59}
+.check input{accent-color:#5148e5;cursor:pointer}.check span{cursor:pointer}
+.dash-main{width:100%;max-width:1440px;padding-left:clamp(24px,5vw,76px);padding-right:clamp(24px,5vw,76px)}
+.dashboard-filters{max-width:none;padding:0;margin-left:0;margin-right:0}
+.dash-head{max-width:none;align-items:flex-start}
+.hero-card{margin-top:4px}
+.stat-grid{margin-top:20px;margin-bottom:42px}
+.section-head{margin-top:34px}
+.trip-grid{align-items:stretch}
+.activity-list{margin-top:4px}
+.empty{min-height:92px;display:grid;place-items:center}
+@media(max-width:800px){
+    .dashboard-shell{display:block;min-height:100vh}
+    .sidebar{width:100%;height:68px;min-height:68px;position:sticky;top:0;z-index:20;display:flex;flex-direction:row;align-items:center;padding:10px 14px;border-right:0;border-bottom:1px solid var(--line);box-shadow:0 5px 18px #1c27400b}
+    .sidebar .brand{padding:0;margin:0 14px 0 0;font-size:0;flex-shrink:0}.sidebar .brand span{font-size:25px}
+    .sidebar nav{display:flex;align-items:center;gap:3px;min-width:0;overflow-x:auto;flex:1}.sidebar nav a{padding:10px 11px;white-space:nowrap;font-size:0}.sidebar nav a b{width:auto;font-size:18px;margin:0}.sidebar nav .nav-divider,.sidebar nav .admin-link{display:none}
+    .sidebar-note{display:none}.sidebar form{margin-left:3px}.logout{padding:8px;font-size:0}.logout:first-letter{font-size:18px}.logout span{display:none}
+    .dash-main{min-height:calc(100vh - 68px);padding:24px 16px 56px}
+    .dash-head{gap:16px;flex-direction:column;margin-bottom:20px}.dash-head h1{font-size:26px}.dash-head .sub{margin-top:6px}
+    .profile{display:none}.hero-card{margin-top:0;padding:24px 22px;min-height:180px}.hero-card h2{font-size:26px}.hero-orbit{font-size:75px;margin-right:-18px}
+    .dashboard-filters{gap:8px;margin:12px 0 22px;flex-wrap:wrap}.search-box{flex-basis:100%;min-width:0}.period-box{flex:1;min-width:0}.filter-button{flex:0 0 auto;padding:13px 16px}
+    .stat-grid{grid-template-columns:1fr;margin:18px 0 30px;gap:10px}.trip-grid{grid-template-columns:1fr;gap:14px}.trips-page-grid .trip-card{min-height:230px}.section-head{margin-top:26px}.section-head a{font-size:11px}
+    .workspace-head{margin-left:-2px;margin-right:-2px}.activity-list article{padding-left:14px;padding-right:14px}.activity-list article b{font-size:12px}
+    .admin-search{flex-wrap:wrap}.admin-search input{flex-basis:calc(100% - 40px)}.admin-search button{margin-left:auto}
+}
