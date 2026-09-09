@@ -25,10 +25,8 @@
                 button.setAttribute('aria-label', visible ? 'Show password' : 'Hide password');
                 button.setAttribute('aria-pressed', String(!visible));
                 const eyeIcon = button.querySelector('.icon-eye');
-                const eyeOffIcon = button.querySelector('.icon-eye-off');
-                if (eyeIcon && eyeOffIcon) {
-                    eyeIcon.hidden = !visible;
-                    eyeOffIcon.hidden = visible;
+                if (eyeIcon) {
+                    button.classList.toggle('is-visible', !visible);
                 } else {
                     button.textContent = visible ? '◉' : '◌';
                 }
