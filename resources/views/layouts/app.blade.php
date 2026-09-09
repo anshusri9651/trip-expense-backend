@@ -22,8 +22,16 @@
                 const input = button.parentElement.querySelector('input');
                 const visible = input.type === 'text';
                 input.type = visible ? 'password' : 'text';
-                button.textContent = visible ? '◉' : '◌';
                 button.setAttribute('aria-label', visible ? 'Show password' : 'Hide password');
+                button.setAttribute('aria-pressed', String(!visible));
+                const eyeIcon = button.querySelector('.icon-eye');
+                const eyeOffIcon = button.querySelector('.icon-eye-off');
+                if (eyeIcon && eyeOffIcon) {
+                    eyeIcon.hidden = !visible;
+                    eyeOffIcon.hidden = visible;
+                } else {
+                    button.textContent = visible ? '◉' : '◌';
+                }
             });
         });
         document.querySelectorAll('form').forEach((form) => {
