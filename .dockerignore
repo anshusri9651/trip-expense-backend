@@ -1,0 +1,10 @@
+.env
+.env.*
+.git
+.gitignore
+vendor
+node_modules
+database/*.sqlite
+storage/logs/*.log
+tests
+.phpunit.result.cache
